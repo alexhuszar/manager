@@ -15,7 +15,8 @@ class LoginForm extends Component {
     emailChanged: PropTypes.func.isRequired,
     passwordChanged: PropTypes.func.isRequired,
     email: PropTypes.string,
-    password: PropTypes.string
+    password: PropTypes.string,
+    loading: PropTypes.bool
   };
 
   static defaultProps = {
@@ -34,9 +35,9 @@ class LoginForm extends Component {
 
   renderButton() {
 
-    // if(this.props.loading) {
-    //   return <Spinner size="small" />
-    // } else {
+    if(this.props.loading) {
+      return <Spinner size="small" />
+    } else {
       return (
         <Button
           onPress={this.handleLoginUser}
@@ -44,7 +45,7 @@ class LoginForm extends Component {
         Login
         </Button>
       );
-    //}
+    }
   }
 
   handleEmailChange(value) {
@@ -116,7 +117,9 @@ const styles = StyleSheet.create({
 const mapStateToProps = ({auth}) => {
   return {
     email: auth.email,
-    password: auth.password
+    password: auth.password,
+    error: auth.error,
+    loading: auth.loading
   }
 };
 
