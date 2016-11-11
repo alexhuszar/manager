@@ -43,8 +43,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   containerStyle: {
-    height: 40,
-    flex : 1,
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center'
   }
