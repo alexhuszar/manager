@@ -33,7 +33,7 @@
     "quotes": ["error", "single"],
     "no-extra-semi": "error",
     "no-extra-boolean-cast": "error",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-console": "warn",
     "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
     "comma-spacing": ["error", {"before": false, "after": true}],
     "semi-spacing": ["error", {"before": false, "after": true }],
@@ -55,5 +55,21 @@
     "react/jsx-no-bind": "error",
     "react/jsx-handler-names": "error",
     "react/jsx-equals-spacing": ["error", "never"]
+  },
+  "globals": {
+    "dispatch": true,
+    "getState": true,
+    "resetState": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "before": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "after": true,
+    "shallow": true,
+    "mount": true,
+    "render": true,
+    "sinon": true
   }
 }
